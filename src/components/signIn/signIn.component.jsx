@@ -3,6 +3,8 @@ import './signIn.styles.scss';
 import FormInput from '../form-input/form-input.component';
 import CustomButton from '../customButton/customButton.component';
 
+import { signInWithGoogle } from '../../config/firebase-config';
+
 export class SignIn extends React.Component {
     constructor() {
         super();
@@ -18,6 +20,11 @@ export class SignIn extends React.Component {
     handleChange = e => {
         const { value, name } = e.target;
         this.setState({ [name]: value });
+    };
+
+    handlePopup = e => {
+        e.preventDefault();
+        signInWithGoogle();
     };
 
     render() {
@@ -42,7 +49,16 @@ export class SignIn extends React.Component {
                         handleChange={this.handleChange}
                         label="password"
                     />
-                    <CustomButton type="submit">Sign In</CustomButton>
+                    <div className="buttons">
+                        <CustomButton type="submit">Sign In</CustomButton>
+                        <CustomButton
+                            type="button"
+                            onClick={this.handlePopup}
+                            isGoogleSignIn
+                        >
+                            Sign In With Google
+                        </CustomButton>
+                    </div>
                 </form>
             </div>
         );
