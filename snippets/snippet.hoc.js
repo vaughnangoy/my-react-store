@@ -1,8 +1,11 @@
 import snippet from './snippet.component';
 import { connect } from 'react-redux';
+import { createStructuredSelector } from 'reselect';
 
-const mapStateToProps = state => ({
-    state,
+import { select } from '../../stateManagement/snippet/snippet.selectors';
+
+const mapStateToProps = createStructuredSelector({
+    select: select,
 });
 
 const mapDispatchToProps = dispatch => ({

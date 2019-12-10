@@ -16,10 +16,18 @@ create_functional_module() {
     cp "$ROOT_DIR/snippets/snippet.styles.scss" "$SRC_DIR/components/$1/$1.styles.scss"
 }
 
+create_functional_page_module() {
+    mkdir -p "$(pwd)/src/pages/$1"
+    cp "$ROOT_DIR/snippets/snippet.func.component.jsx" "$SRC_DIR/pages/$1/$1.component.jsx"
+    cp "$ROOT_DIR/snippets/snippet.component.test.js" "$SRC_DIR/pages/$1/$1.component.test.js"
+    cp "$ROOT_DIR/snippets/snippet.styles.scss" "$SRC_DIR/pages/$1/$1.styles.scss"
+}
+
 create_action_reducer_folder_contents() {
     mkdir -p "$(pwd)/src/stateManagement/$1"
     cp "$ROOT_DIR/snippets/snippet.redux.actions.js" "$SRC_DIR/stateManagement/$1/$1.actions.js"
     cp "$ROOT_DIR/snippets/snippet.redux.reducer.js" "$SRC_DIR/stateManagement/$1/$1.reducer.js"
+    cp "$ROOT_DIR/snippets/snippet.redux.selectors.js" "$SRC_DIR/stateManagement/$1/$1.selectors.js"
 }
 
 create_higher_order_component() {
@@ -32,3 +40,4 @@ alias functional_component=create_functional_module
 alias fc=functional_component
 alias redux=create_action_reducer_folder_contents
 alias hoc=create_higher_order_component
+alias fcp=create_functional_page_module
