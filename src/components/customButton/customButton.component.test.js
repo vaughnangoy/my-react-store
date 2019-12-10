@@ -1,9 +1,23 @@
 import React from 'react';
-import Enzyme, { shallow } from 'enzyme';
+import { cleanup, render } from '@testing-library/react';
+import '@testing-library/jest-dom/extend-expect';
 
-import EnzymeAdapter from 'enzyme-adapter-react-16';
-Enzyme.configure({ adapter: new EnzymeAdapter() });
+import CustomButton from './customButton.component';
 
-// describe('', () => {
-//     it('', () => {});
-// });
+describe('CustomButton', () => {
+    afterEach(cleanup);
+    it('renders', () => {
+        const { asFragment } = render(<CustomButton />);
+        expect(asFragment()).toMatchSnapshot();
+    });
+
+    it('should render the children', () => {
+        const { getByTestId, getByText } = render(
+            <CustomButton>
+                <div data-testid="test">Test Child Component</div>
+            </CustomButton>,
+        );
+        expect(getByTestId('test')).toBeInTheDocument();
+        expect(getByText('Test Child Component')).toBeInTheDocument();
+    });
+});

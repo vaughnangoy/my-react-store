@@ -1,0 +1,101 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SignUp renders 1`] = `
+<DocumentFragment>
+  <div
+    class="sign-up"
+  >
+    <h2
+      class="title"
+    >
+      I do not have an account
+    </h2>
+    <span>
+      Sign up with your email and password
+    </span>
+    <form
+      class="sign-up-form"
+      data-testid="sign-up-form"
+    >
+      <div
+        class="group"
+      >
+        <input
+          class="form-input"
+          id="displayName"
+          name="displayName"
+          required=""
+          type="displayName"
+          value=""
+        />
+        <label
+          class=" form-input-label"
+          for="displayName"
+        >
+          displayName
+        </label>
+      </div>
+      <div
+        class="group"
+      >
+        <input
+          class="form-input"
+          id="email"
+          name="email"
+          required=""
+          type="email"
+          value=""
+        />
+        <label
+          class=" form-input-label"
+          for="email"
+        >
+          email
+        </label>
+      </div>
+      <div
+        class="group"
+      >
+        <input
+          class="form-input"
+          id="password"
+          name="password"
+          required=""
+          type="password"
+          value=""
+        />
+        <label
+          class=" form-input-label"
+          for="password"
+        >
+          password
+        </label>
+      </div>
+      <div
+        class="group"
+      >
+        <input
+          class="form-input"
+          id="confirmPassword"
+          name="confirmPassword"
+          required=""
+          type="password"
+          value=""
+        />
+        <label
+          class=" form-input-label"
+          for="confirmPassword"
+        >
+          confirmPassword
+        </label>
+      </div>
+      <button
+        class=" custom-button"
+        type="submit"
+      >
+        Sign Up
+      </button>
+    </form>
+  </div>
+</DocumentFragment>
+`;

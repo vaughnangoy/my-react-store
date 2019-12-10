@@ -2,10 +2,12 @@ import React from 'react';
 import './header.styles.scss';
 import { Link } from 'react-router-dom';
 import { ReactComponent as Logo } from '../../assets/images/crown.svg';
+import CartIcon from '../cart-icon/cart-icon.hoc';
+import CartDropdown from '../cart-dropdown/cart-dropdown.hoc';
 
 import { auth } from '../../config/firebase-config';
 
-const header = ({ isLoggedIn }) => (
+const header = ({ currentUser, hidden }) => (
     <div className="header">
         <Link to="/">
             <Logo className="logo" />
@@ -17,7 +19,7 @@ const header = ({ isLoggedIn }) => (
             <Link className="option" to="/shop">
                 CONTACT
             </Link>
-            {isLoggedIn ? (
+            {currentUser ? (
                 <Link
                     className="option"
                     to="/sign-in"
@@ -30,7 +32,9 @@ const header = ({ isLoggedIn }) => (
                     LOGIN
                 </Link>
             )}
+            <CartIcon />
         </div>
+        {hidden ? null : <CartDropdown />}
     </div>
 );
 

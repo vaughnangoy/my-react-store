@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CollectionItem renders 1`] = `
+<DocumentFragment>
+  <div
+    class="collection-item"
+  >
+    <div
+      class="image"
+      data-testid="image"
+      style="background-image: url(undefined);"
+    />
+    <div
+      class="collection-footer"
+    >
+      <span
+        class="name"
+      />
+      <span
+        class="price"
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;

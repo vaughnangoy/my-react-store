@@ -18,7 +18,7 @@ export class SignUp extends React.Component {
         };
     }
 
-    handleSubmit = async e => {
+    handleThisSubmit = async e => {
         e.preventDefault();
         const { displayName, email, password, confirmPassword } = this.state;
         this.setState({ errorMessage: null });
@@ -67,36 +67,46 @@ export class SignUp extends React.Component {
                     <FormInput
                         type="displayName"
                         name="displayName"
+                        id="displayName"
                         value={this.state.displayName}
                         required="required"
                         handleChange={this.handleChange}
                         label="displayName"
+                        to="displayName"
                     />
                     <FormInput
                         type="email"
                         name="email"
+                        id="email"
                         value={this.state.email}
                         required="required"
                         handleChange={this.handleChange}
                         label="email"
+                        to="email"
                     />
                     <FormInput
                         type="password"
                         name="password"
+                        id="password"
                         value={this.state.password}
                         required="required"
                         handleChange={this.handleChange}
                         label="password"
+                        to="password"
                     />
                     <FormInput
                         type="password"
                         name="confirmPassword"
+                        id="confirmPassword"
                         value={this.state.confirmPassword}
                         required="required"
                         handleChange={this.handleChange}
                         label="confirmPassword"
+                        to="confirmPassword"
                     />
-                    <CustomButton type="submit">Sign Up</CustomButton>
+                    <CustomButton type="submit" data-testid="sign-up-form">
+                        Sign Up
+                    </CustomButton>
                 </form>
             </div>
         );

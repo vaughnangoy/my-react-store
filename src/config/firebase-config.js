@@ -4,14 +4,14 @@ import 'firebase/auth';
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: '',
-    authDomain: '',
-    databaseURL: '',
-    projectId: '',
-    storageBucket: '',
-    messagingSenderId: '',
-    appId: '',
-    measurementId: '',
+    apiKey: 'AIzaSyDph04ay7lzzQqjT_BlNftF5T2rolzNJT0',
+    authDomain: 'my-react-site-8e53b.firebaseapp.com',
+    databaseURL: 'https://my-react-site-8e53b.firebaseio.com',
+    projectId: 'my-react-site-8e53b',
+    storageBucket: 'my-react-site-8e53b.appspot.com',
+    messagingSenderId: '1046031979483',
+    appId: '1:1046031979483:web:7affd39a0cb811fae30dfe',
+    measurementId: 'G-HK1BPMJYHE',
 };
 
 export const createUserProfile = async (userAuth, additionalData) => {

@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Cart Dropdown should render 1`] = `
+<DocumentFragment>
+  <div
+    class="header"
+  >
+    <a
+      href="/"
+    >
+      <svg
+        class="logo"
+      >
+        crown.svg
+      </svg>
+    </a>
+    <div
+      class="options"
+    >
+      <a
+        class="option"
+        href="/shop"
+      >
+        SHOP
+      </a>
+      <a
+        class="option"
+        href="/shop"
+      >
+        CONTACT
+      </a>
+      <a
+        class="option"
+        href="/sign-in"
+      >
+        LOGIN
+      </a>
+      <div
+        class="cart-icon"
+      >
+        <svg
+          class="shopping-icon"
+        >
+          shopping-bag.svg
+        </svg>
+        <span
+          class="item-count"
+          data-testid="counter"
+        >
+          0
+        </span>
+      </div>
+    </div>
+    <div
+      class="cart-dropdown"
+    >
+      <div
+        class="cart-items"
+      />
+      <button
+        class=" custom-button"
+      >
+        GO TO CHECKOUT
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;
